@@ -1,0 +1,82 @@
+-tornar a pasta o nosso ambiente
+
+python 		-m 		venv				env
+Linguagem  	Criar		sigla do Ambiente Virtual	nome da pasta
+
+
+- para ativar
+
+source env/scripts/activate
+
+
+
+- instalar biblioteca
+
+pip install -r requeriments.txt
+
+pip install django
+
+pip freeze > requeriments.txt   --- isso aqui vai salvar o meu framework, nos requeriments para depois outro programador saber o que foi usado.
+
+pip uninstall 
+
+
+- como saber se esta instalado
+
+pip freeze
+
+
+
+- usar os comandos do django - no ambiente ativado
+
+
+para criar o projeto do django - <comando>      django-admin startproject blog .(nomeDoProjeto)
+
+django-admin              startapp landing - 
+Arquitetura do projeto
+
+									esse ponto serve para criar o meu projeto direto no nomeDoProjeto
+
+
+
+
+--------------------[dps de tudo isso] ------------------
+criar a pasta template dentro do NomeDoProjeto.
+criar pasta static dentro do NomeDoProjeto.
+criar dentro da s	
+-----------------------[no código] ------------------
+
+ir nos settings colocar o meu app
+
+ir no website, abrir o urls criar um caminho vazio. [porque? para que quando cair em uma pagina inexistente rederizar  esse pagina para o usuário]
+
+from NomeDoAPP import views
+
+-------------[Verbis HTTP - São os verbos para executar ações em sistemas]----------------------
+
+Get - Mostrar a informação do banco de dados
+Post - [Ação de enviar] Mandar uma mensagem, ou preencher um cadastro.
+Delete - [Tirar uma informação de uma base de dados].
+update - [Atualizar].
+
+ir na views, criar uma função index exemplo :
+	
+	def index(request):
+		retur render(request, 'NomeDaPagina.html')
+
+
+ir em templates, criar o arquivo index.html
+	[dentro do index]
+		<h1>PETS MUNDO XALAUSTICO</h1>
+
+criar a o arquivo estilo.css
+	<p><a></a></p>
+
+
+python manage.py runserver - para rodar o projeto com o django
+
+
+
+
+
+

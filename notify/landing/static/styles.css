@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(5, minmax(100px, auto));
+  grid-template-areas: 	
+    "header"
+    "main"
+    "contato"
+    "feedback"
+    "footer";
+}
+
+header {
+  background-image: url(img/banner.png);
+  background-position: center;
+  background-size: cover;
+  border-top: 5px solid #2ecb70;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  grid-area: header;
+  width: 100%;
+  height: 40vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+header h3 {
+  font-family: "Pacifico";
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+header h3 span {
+  color: #2ecb70;
+}
+
+header p {
+  width: 75%;
+  word-wrap: normal;
+}
+
+.imagens-header {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.imagens-header div {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 100%;
+  padding: 10px;
+  transition: 1s;
+}
+
+.imagens-header div:hover {
+  background-color: #2ecb70;
+}
+
+header .mao {
+  align-self: flex-end;
+  display: none;
+  margin-left: 20px;
+  height: 80%;
+}
+
+header .mao img {
+  height: 100%;
+}
+
+main {
+  grid-area: main;
+}
+
+.contato {
+  grid-area: contato;
+}
+
+.feedback {
+  grid-area: feedback;
+}
+
+footer {
+  grid-area: footer;
+}
+
+@media(min-width: 576px) {
+  header {
+    flex-direction: row;
+  }
+
+  header h3 {
+    font-size: 2rem;
+  }
+
+  .titulo {
+    display: block;
+  }
+
+  header .mao {
+    display: block;
+  }
+}
+
+@media(min-width: 768px) {
+  header h3 {
+    font-size: 3rem;
+  }
+}
